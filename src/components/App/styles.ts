@@ -8,7 +8,8 @@ export const styles = StyleSheet.create({
     backgroundColor: "#111",
   },
 
-  loader: {
-    borderColor: "#fff",
+  header: {
+    alignItems: "center",
+    justifyContent: "center",
   },
 });

@@ -1,11 +1,13 @@
 import React from "react";
-import { View, Text, ActivityIndicator } from "react-native";
+import { View, Image } from "react-native";
 import { styles } from "./styles";
-
+import logo from "../../assets/logo.png";
 export function Main() {
   return (
     <View style={styles.container}>
-      <Text> teste</Text>
+      <View style={styles.header}>
+        <Image source={logo} />
+      </View>
     </View>
   );
 }
