@@ -1,22 +1,20 @@
 import React from "react";
-import { View, Image } from "react-native";
+import { View, Image, Text } from "react-native";
 import { styles } from "./styles";
 import logo from "../../assets/logo.png";
-import { formatDate } from "@/utils/date";
+import { formatDate } from "../../utils/date";
 
 export function Main() {
+  const { userName, formatDate: date, message } = formatDate("Lucas");
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Image
-          source={{
-            uri: logo,
-          }}
-          style={styles.image}
-        />
+        <Image source={logo} style={styles.image} />
       </View>
 
-      <View></View>
+      <View style={styles.main}>
+        <Text> {date}</Text>
+      </View>
     </View>
   );
 }

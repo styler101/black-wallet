@@ -3,12 +3,8 @@ import { FormatDateProps } from "./interfaces";
 export function formatDate(userName: string): FormatDateProps {
   const date = new Date();
   const [formatDate, formatHours] = date.toLocaleString().split(" ");
-  const [hours, minutes, seconds] = formatHours;
-  return {
-    userName,
-    formatDate,
-    message: showGreetings(Number(hours)),
-  };
+  console.log(date.toLocaleString());
+  return {} as FormatDateProps;
 }
 
 function showGreetings(hour: number): string {
