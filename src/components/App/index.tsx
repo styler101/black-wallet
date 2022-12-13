@@ -1,18 +1,11 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, ActivityIndicator } from "react-native";
+import { styles } from "./styles";
 
 export function Main() {
   return (
     <View style={styles.container}>
-      <Text> Black Wallet </Text>
+      <Text> teste</Text>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
