@@ -1,10 +1,16 @@
+import moment from "moment";
 import { FormatDateProps } from "./interfaces";
 
 export function formatDate(userName: string): FormatDateProps {
   const date = new Date();
-  const [formatDate, formatHours] = date.toLocaleString().split(" ");
-  console.log(date.toLocaleString());
-  return {} as FormatDateProps;
+  const formatDate = moment(date).format("DD/MM/yyyy");
+  const hour = moment(date).get("hours");
+
+  return {
+    userName,
+    formatDate,
+    message: showGreetings(hour),
+  } as FormatDateProps;
 }
 
 function showGreetings(hour: number): string {
