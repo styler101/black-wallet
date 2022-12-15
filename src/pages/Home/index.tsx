@@ -6,9 +6,7 @@ import {
   Image,
   TouchableOpacity,
 } from "react-native";
-//@ts-ignore
-import { CreditCardInput } from "react-native-credit-card-input";
-
+import cardImage from "../../assets/card.png";
 import logo from "../../assets/logo.png";
 import { styles } from "./styles";
 
@@ -18,14 +16,13 @@ export function Home() {
       <View style={styles.header}>
         <Image source={logo} style={styles.image} />
       </View>
-      <View>
-        <CreditCardInput />
-        <Text>
-          {" "}
+      <View style={styles.main}>
+        <Image source={cardImage} style={styles.cardImage} />
+        <Text style={styles.cardText}>
           Make payment muck easier by using all your cards in one piece
         </Text>
-        <TouchableOpacity>
-          <Text>+ Add Card</Text>
+        <TouchableOpacity style={styles.button}>
+          <Text style={styles.cardText}>+ Add Card</Text>
         </TouchableOpacity>
       </View>
     </SafeAreaView>

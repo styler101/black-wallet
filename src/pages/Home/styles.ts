@@ -9,18 +9,49 @@ export const styles = StyleSheet.create({
     justifyContent: "space-around",
   },
 
-  header: {},
+  header: {
+    paddingHorizontal: 32,
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
 
   image: {
     width: 180,
     height: 50,
   },
 
-  main: {},
+  main: {
+    flex: 2,
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-around",
+  },
   cardImage: {
-    width: 300,
-
+    width: 320,
+    height: 280,
     resizeMode: "contain",
   },
-  footer: {},
+
+  cardText: {
+    color: "#ffffffa9",
+    width: 240,
+    textAlign: "center",
+    fontFamily: "Inter_700Bold",
+    fontSize: 16,
+    textTransform: "uppercase",
+  },
+  button: {
+    marginBottom: 50,
+    width: 250,
+    height: 42,
+    backgroundColor: "#F4AE64",
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 4,
+  },
+
+  buttonText: {
+    color: "#fff",
+  },
 });
