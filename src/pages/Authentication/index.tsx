@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { View, Text, Image, TouchableOpacity } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { Ionicons } from "@expo/vector-icons";
-import { Alert, View, Text, Image, TouchableOpacity } from "react-native";
-import logo from "../../assets/logo.png";
 import * as LocalAuthentication from "expo-local-authentication";
 import { formatDate } from "../../utils/date";
 import { styles } from "./styles";
+import logo from "../../assets/logo.png";
 
 export function Authentication() {
+  const navigation = useNavigation();
   const { userName, formatDate: date, message } = formatDate("Lucas");
   const [hasBiometricSupported, setHasBiometricSupported] =
     React.useState<boolean>(false);
@@ -19,14 +21,9 @@ export function Authentication() {
   }
 
   async function handleBiometricAuth() {
-    const savedBiometric = await LocalAuthentication.authenticateAsync({
-      promptMessage: "Login with Biometric",
-      disableDeviceFallback: true,
-    });
-    console.log(savedBiometric);
-    return Alert.alert(`Bem Vindo ${userName}`);
+    navigation.navigate("Home");
   }
-  useEffect(() => {
+  React.useEffect(() => {
     biometricSupported();
   }, []);
 
